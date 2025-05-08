@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "courses"
+    label: "Courses"
+    folder: "blog/courses"
+    create: true
+    fields:
+      - { label: "Course Title", name: "title", widget: "string" }
+      - { label: "Course Description", name: "excerpt", widget: "text" }
+      - { label: "Full Content", name: "body", widget: "markdown" }
+      - { label: "YouTube Link", name: "video_link", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "updates"
+    label: "Weekly Updates"
+    folder: "blog/updates"
+    create: true
+    fields:
+      - { label: "Update Title", name: "title", widget: "string" }
+      - { label: "Update Description", name: "excerpt", widget: "text" }
+      - { label: "Full Content", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - Skillhub Academy</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Our Courses</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../interviews/index.html">Weekly Updates</a></li>
+        <li><a href="../admin/index.html">Admin Panel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Available Courses</h2>
+
+    <div class="course-list">
+      <!-- Each course is a dynamically loaded blog post -->
+      {% for post in collections.courses %}
+        <div class="course-item">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt }}</p>
+          <a href="{{ post.url }}">Start Learning</a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MCflows. All rights reserved.</p>
+  </footer>
+</body>
+</html>
