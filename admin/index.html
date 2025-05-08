@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Panel - Skillhub Academy</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
   <header>
@@ -26,8 +25,14 @@
     <a href="/admin/#/collections/updates">Manage Weekly Updates</a>
   </section>
 
+  <!-- 👇 This is the magic line: CMS will render here -->
+  <div id="nc-root"></div>
+
   <footer>
     <p>© 2025 Skillhub Academy. All rights reserved.</p>
   </footer>
+
+  <!-- CMS script should load AFTER the div -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
